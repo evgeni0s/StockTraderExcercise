@@ -1,0 +1,49 @@
+﻿<UserControl
+    x:Class="StockTraderExcercise.Controls.ValidationStatusIndicator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:StockTraderExcercise.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Height="25"
+    d:DataContext="{d:DesignInstance local:ValidationStatusIndicator}"
+    d:DesignHeight="300"
+    d:DesignWidth="300"
+    mc:Ignorable="d">
+    <Grid>
+        <!--  appbar_check  -->
+        <!--  appbar_close  -->
+        <Border
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Background="#02FFFFFF"
+            CornerRadius="15"
+            Visibility="{Binding IsValid, Converter={StaticResource VisibilityConverter}}">
+
+            <Viewbox Margin="-4">
+                <ContentControl Content="{StaticResource appbar_check}">
+                    <ContentControl.Resources>
+                        <SolidColorBrush x:Key="BlackBrush" Color="Green" />
+                    </ContentControl.Resources>
+                </ContentControl>
+            </Viewbox>
+        </Border>
+        <Border
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Background="#02FFFFFF"
+            CornerRadius="15"
+            ToolTip="{Binding ErrorMessage}"
+            Visibility="{Binding IsValid, Converter={StaticResource VisibilityConverter}, ConverterParameter=Invert}">
+
+            <Viewbox Margin="-4">
+                <ContentControl Content="{StaticResource appbar_close}">
+                    <ContentControl.Resources>
+                        <SolidColorBrush x:Key="BlackBrush" Color="Red" />
+                    </ContentControl.Resources>
+                </ContentControl>
+            </Viewbox>
+        </Border>
+
+    </Grid>
+</UserControl>

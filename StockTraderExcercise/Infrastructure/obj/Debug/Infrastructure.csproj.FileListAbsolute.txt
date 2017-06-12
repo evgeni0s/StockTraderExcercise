@@ -1,0 +1,5 @@
+c:\users\evgeni0s\documents\visual studio 2017\Projects\StockTraderExcercise\Infrastructure\bin\Debug\Infrastructure.dll
+c:\users\evgeni0s\documents\visual studio 2017\Projects\StockTraderExcercise\Infrastructure\bin\Debug\Infrastructure.pdb
+c:\users\evgeni0s\documents\visual studio 2017\Projects\StockTraderExcercise\Infrastructure\obj\Debug\Infrastructure.csprojResolveAssemblyReference.cache
+c:\users\evgeni0s\documents\visual studio 2017\Projects\StockTraderExcercise\Infrastructure\obj\Debug\Infrastructure.dll
+c:\users\evgeni0s\documents\visual studio 2017\Projects\StockTraderExcercise\Infrastructure\obj\Debug\Infrastructure.pdb

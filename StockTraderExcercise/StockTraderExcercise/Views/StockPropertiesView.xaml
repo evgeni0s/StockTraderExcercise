@@ -1,0 +1,39 @@
+﻿<UserControl
+    x:Class="StockTraderExcercise.Views.StocksPropertiesView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:StockTraderExcercise.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="300"
+    d:DesignWidth="300"
+    
+    mc:Ignorable="d">
+    <StackPanel>
+            <GroupBox >
+                <GroupBox.Header>
+                    <TextBlock
+                Background="Transparent"
+                FontSize="15"
+                FontWeight="SemiBold"
+                Foreground="#69B7FC">
+                    Equities
+                    </TextBlock>
+                </GroupBox.Header>
+                <ContentControl DataContext="{Binding EquityProperties}" Content="{Binding}"/>
+            </GroupBox>
+            <GroupBox >
+                <GroupBox.Header>
+                    <TextBlock
+                Background="Transparent"
+                FontSize="15"
+                FontWeight="SemiBold"
+                Foreground="#69B7FC">
+                    Bonds
+                    </TextBlock>
+                </GroupBox.Header>
+                <ContentControl DataContext="{Binding BondProperties}" Content="{Binding}"/>
+            </GroupBox>
+        </StackPanel>
+
+</UserControl>

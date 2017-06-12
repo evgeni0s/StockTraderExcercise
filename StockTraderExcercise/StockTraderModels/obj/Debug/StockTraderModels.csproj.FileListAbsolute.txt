@@ -1,0 +1,5 @@
+c:\users\evgeni0s\documents\visual studio 2017\Projects\StockTraderExcercise\StockTraderModels\bin\Debug\StockTraderModels.dll
+c:\users\evgeni0s\documents\visual studio 2017\Projects\StockTraderExcercise\StockTraderModels\bin\Debug\StockTraderModels.pdb
+c:\users\evgeni0s\documents\visual studio 2017\Projects\StockTraderExcercise\StockTraderModels\obj\Debug\StockTraderModels.dll
+c:\users\evgeni0s\documents\visual studio 2017\Projects\StockTraderExcercise\StockTraderModels\obj\Debug\StockTraderModels.pdb
+C:\Users\evgeni0s\Documents\Visual Studio 2017\Projects\StockTraderExcercise\StockTraderModels\obj\Debug\StockTraderModels.csprojResolveAssemblyReference.cache

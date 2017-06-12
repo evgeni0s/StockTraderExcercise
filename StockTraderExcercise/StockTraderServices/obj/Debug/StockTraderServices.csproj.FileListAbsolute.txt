@@ -1,0 +1,14 @@
+c:\users\evgeni0s\documents\visual studio 2017\Projects\StockTraderExcercise\StockTraderServices\bin\Debug\StockTraderServices.dll
+c:\users\evgeni0s\documents\visual studio 2017\Projects\StockTraderExcercise\StockTraderServices\bin\Debug\StockTraderServices.pdb
+c:\users\evgeni0s\documents\visual studio 2017\Projects\StockTraderExcercise\StockTraderServices\bin\Debug\System.Xml.Linq.dll
+c:\users\evgeni0s\documents\visual studio 2017\Projects\StockTraderExcercise\StockTraderServices\obj\Debug\StockTraderServices.csprojResolveAssemblyReference.cache
+c:\users\evgeni0s\documents\visual studio 2017\Projects\StockTraderExcercise\StockTraderServices\obj\Debug\StockTraderServices.dll
+c:\users\evgeni0s\documents\visual studio 2017\Projects\StockTraderExcercise\StockTraderServices\obj\Debug\StockTraderServices.pdb
+C:\Users\evgeni0s\Documents\Visual Studio 2017\Projects\StockTraderExcercise\StockTraderServices\bin\Debug\StockTraderServices.dll.config
+C:\Users\evgeni0s\Documents\Visual Studio 2017\Projects\StockTraderExcercise\StockTraderServices\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\evgeni0s\Documents\Visual Studio 2017\Projects\StockTraderExcercise\StockTraderServices\bin\Debug\StockTraderModels.dll
+C:\Users\evgeni0s\Documents\Visual Studio 2017\Projects\StockTraderExcercise\StockTraderServices\bin\Debug\StockTraderModels.pdb
+C:\Users\evgeni0s\Documents\Visual Studio 2017\Projects\StockTraderExcercise\StockTraderServices\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\evgeni0s\Documents\Visual Studio 2017\Projects\StockTraderExcercise\StockTraderServices\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\evgeni0s\Documents\Visual Studio 2017\Projects\StockTraderExcercise\StockTraderServices\bin\Debug\Dapper.dll
+C:\Users\evgeni0s\Documents\Visual Studio 2017\Projects\StockTraderExcercise\StockTraderServices\bin\Debug\Dapper.xml

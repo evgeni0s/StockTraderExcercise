@@ -1,0 +1,108 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:conv="clr-namespace:StockTraderExcercise.Converters"
+    xmlns:controls="clr-namespace:StockTraderExcercise.Controls">
+    <conv:BooleanToColorConverter x:Key="BooleanToColorConverter" />
+    <conv:VisibilityConverter x:Key="VisibilityConverter" />
+    <conv:EnumBooleanConverter x:Key="EnumBooleanConverter" />
+    <conv:InverseBooleanConverter x:Key="InverseBooleanConverter" />
+    <ControlTemplate x:Key="ButtonWithVectorIconTemplate" TargetType="Button">
+        <Grid>
+            <Border
+                x:Name="outer_PART"
+                Background="#FFFFFF"
+                CornerRadius="15" />
+            <Viewbox Margin="-4">
+                <ContentPresenter />
+            </Viewbox>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="outer_PART" Property="Background" Value="#7FE8FF00" />
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="outer_PART" Property="Background" Value="LightGray" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="FlatToggleButton" TargetType="ToggleButton">
+        <Border
+            x:Name="outer_PART"
+            Padding="4"
+            Background="White"
+            BorderBrush="#A3CAFF"
+            BorderThickness="2">
+            <ContentPresenter />
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter TargetName="outer_PART" Property="Background" Value="#FF31A3FF" />
+                <Setter TargetName="outer_PART" Property="BorderBrush" Value="#FF31A3FF" />
+                <Setter Property="Foreground" Value="White" />
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="outer_PART" Property="Background" Value="#A3CAFF" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style TargetType="{x:Type ToggleButton}">
+        <Setter Property="Template" Value="{StaticResource FlatToggleButton}" />
+    </Style>
+
+    <ControlTemplate x:Key="FlatButton" TargetType="Button">
+        <Border
+            x:Name="outer_PART"
+            Padding="4"
+            Background="White"
+            BorderBrush="#A3CAFF"
+            BorderThickness="2">
+            <ContentPresenter />
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="outer_PART" Property="Background" Value="#FF31A3FF" />
+                <Setter TargetName="outer_PART" Property="BorderBrush" Value="#FF31A3FF" />
+                <Setter Property="Foreground" Value="White" />
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="outer_PART" Property="Background" Value="#A3CAFF" />
+                <Setter Property="Foreground" Value="White" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter TargetName="outer_PART" Property="Background" Value="#9A9A9A" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    
+    <!--<Style TargetType="{x:Type Button}">
+        <Setter Property="Template" Value="{StaticResource FlatButton}" />
+    </Style>-->
+
+    <!--<Style TargetType="{x:Type TextBox}">
+        <Setter Property="Validation.ErrorTemplate">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        --><!--Placeholder for the TextBox itself--><!--
+                        <AdornedElementPlaceholder x:Name="textBox"/>
+                        <controls:ValidationStatusIndicator IsValid=""/>
+                        <TextBlock Grid.ColumnSpan="2" Grid.Row="1" Text="{Binding [0].ErrorContent}" Foreground="Red"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>-->
+
+</ResourceDictionary>

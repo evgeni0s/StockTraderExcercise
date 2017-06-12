@@ -1,0 +1,76 @@
+﻿<UserControl
+    x:Class="StockTraderExcercise.Views.CreateStockView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:StockTraderExcercise.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:StockTraderExcercise.ViewModels"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local1="clr-namespace:StockTraderExcercise.Helpers"
+    d:DataContext="{d:DesignInstance local:CreateStockViewModel}"
+    d:DesignHeight="200"
+    d:DesignWidth="600"
+    mc:Ignorable="d">
+    <GroupBox>
+        <GroupBox.Header>
+            <TextBlock
+                Background="Transparent"
+                FontSize="15"
+                FontWeight="SemiBold"
+                Foreground="#69B7FC">
+                Add new Stock to Fund
+            </TextBlock>
+        </GroupBox.Header>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <StackPanel
+                Margin="10"
+                VerticalAlignment="Top"
+                Orientation="Horizontal">
+                <Label>Price:</Label>
+                <TextBox x:Name="Price"
+                    Width="70"
+                    FontSize="15"
+                    Text="{Binding PriceString, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, ValidatesOnNotifyDataErrors=True}" />
+                <controls:ValidationStatusIndicator
+                    IsValid="{Binding ElementName=Price, Path=(Validation.HasError), Converter={StaticResource InverseBooleanConverter}}" 
+                    ErrorMessage="{Binding ElementName=Price, Path=(Validation.Errors)[0].ErrorContent}"/>
+                <Label>Quantity:</Label>
+                <TextBox x:Name="Quantity"
+                    Width="70"
+                    FontSize="15"
+                    Text="{Binding QuantityString, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True, ValidatesOnNotifyDataErrors=True}" />
+                <controls:ValidationStatusIndicator 
+                    IsValid="{Binding ElementName=Quantity, Path=(Validation.HasError), Converter={StaticResource InverseBooleanConverter}}" 
+                    ErrorMessage="{Binding ElementName=Quantity, Path=(Validation.Errors)[0].ErrorContent}"/>
+                <Label>Stock Type:</Label>
+                <StackPanel VerticalAlignment="Top" Orientation="Horizontal">
+                    <RadioButton
+                        Content="Bond"
+                        IsChecked="{Binding StockType, Converter={StaticResource EnumBooleanConverter}, ConverterParameter=Bond}"
+                        Style="{StaticResource {x:Type ToggleButton}}" />
+                    <RadioButton
+                        Content="Equity"
+                        IsChecked="{Binding StockType, Converter={StaticResource EnumBooleanConverter}, ConverterParameter=Equity}"
+                        Style="{StaticResource {x:Type ToggleButton}}" />
+                </StackPanel>
+            </StackPanel>
+            <Button Grid.Row="1" Template="{StaticResource FlatButton}"
+                   HorizontalAlignment="Left"
+                    IsEnabled="{Binding HasErrors, Converter={StaticResource InverseBooleanConverter}}"
+                    Command="{Binding AddStockCommand}"
+                    FontSize="15">Add stock to Fond</Button>
+            <ScrollViewer Grid.Row="2">
+                <ItemsControl
+                
+                FontWeight="Bold"
+                Foreground="#FF1100"
+                ItemsSource="{Binding AllErrors}"  />
+            </ScrollViewer>
+        </Grid>
+    </GroupBox>
+</UserControl>
